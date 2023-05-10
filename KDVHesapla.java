@@ -3,18 +3,18 @@ import java.util.Scanner;
 
 public class KDVHesapla {
     public static void main(String[] args){
-        double tutar, kdvOranı=0.18, kdvTutar, kdvliTutar;
-        Scanner input=new Scanner(System.in);
+        double fiyat ;
+        Scanner inp = new Scanner(System.in);
+        System.out.println("lütfen fiyat bilgisi giriniz :");
+        fiyat = inp.nextDouble();
+        double kdv=fiyat*0.18;
+        double kdv1=fiyat*0.08;
+        System.out.println("kdvsiz tutar : " + fiyat);
+        double sonuç =(fiyat>=0 && fiyat<=1000) ?  kdv : kdv1 ;
+        double toplam=sonuç+fiyat;
 
-        System.out.println("Ücret Tutarını Giriniz:");
-        tutar=input.nextDouble();
 
-        kdvTutar=tutar*kdvOranı;
-        kdvliTutar=tutar+kdvTutar;
-
-        System.out.println("KDV'siz tutar:"+tutar);
-        System.out.println("KDV Oranı:"+kdvOranı);
-        System.out.println("KDV Tutarı:"+kdvTutar);
-        System.out.println("KDV'li Tutar:"+kdvliTutar);
+        System.out.println("kdv tutarı : " +sonuç );
+        System.out.println("KDV'li Tutar: "+ toplam);
     }
 }
