@@ -1,10 +1,11 @@
-package Giris;
 import java.util.Scanner;
+// Üçgenin alanı olarak düzeltiyorum bu programı.
 
 public class HipotenusBulma {
     public static void main(String[] args){
-        int a,b;
-        double c;
+        int a,b,c;
+        double u, alan;
+
 
         Scanner input=new Scanner(System.in);
         System.out.println("İlk Değeri Giriniz:");
@@ -12,9 +13,15 @@ public class HipotenusBulma {
 
         System.out.println("İkinci Değeri Giriniz:");
         b= input.nextInt();
+        System.out.println("Üçüncü Değeri Giriniz:");
+        c= input.nextInt();
 
-        c=Math.sqrt((a*a)+(b*b));
-        System.out.println("Sonuç:"+c);
+        u=(a+b+c)/2;
+        alan=Math.sqrt(u*(u-a)*(u-b)*(u-c));
+
+        System.out.println("Alan:"+ alan);
+
+        
 
     }
 }
