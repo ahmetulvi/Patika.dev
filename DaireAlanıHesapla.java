@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//Düzeltildi
 
 public class DaireAlanı {
     public static void main(String[] args){
@@ -13,7 +14,7 @@ public class DaireAlanı {
         System.out.println("Dairenin merkez açısını giriniz:");
         a=input.nextInt();
 
-        sonuc=(pi*(r*r)*a);
+        sonuc=(pi*(r*r)*a)/360;
         System.out.println("Sonuç: "+sonuc);
 
 
