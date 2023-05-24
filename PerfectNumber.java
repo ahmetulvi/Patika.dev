@@ -3,7 +3,7 @@ public class PerfectNumber {
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         // 28 14 7 4 2 1
-        int i,n,toplam,carpan=0;
+        int i,n,carpan=0;
         System.out.println("Lütfen Bir Sayı Giriniz: ");
         n= sc.nextInt();
 
